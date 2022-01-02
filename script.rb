@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 def caeser_cipher(message, shift_factor)
     
     # convert shift_factor to number between 1 and 26 to simplify encryption step
@@ -7,8 +5,6 @@ def caeser_cipher(message, shift_factor)
 
     # convert message input to ASCII encoding
     message_ascii = message.bytes
-    
-    binding.pry
 
     #go through each character, see if it is a letter, and shift it based on shift_factor
     message_ascii_shifted = []
@@ -36,3 +32,5 @@ def caeser_cipher(message, shift_factor)
 end
 
 caeser_cipher("What a string!", 5)
+caeser_cipher("What a string!", 31)
+caeser_cipher("What a string!", -21)
